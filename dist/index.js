@@ -16152,7 +16152,7 @@ const init = () => {
 
 		return {
 			authorName: data.commit.author.name,
-			authorLogin: data.author.login,
+			authorLogin: data.author?.login ?? data.commit.author.login,
 			commitMessage: data.commit.message
 		}
 	}
